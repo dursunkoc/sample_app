@@ -21,7 +21,7 @@ describe "Static pages" do
     end
     
     it "should have the right title" do
-      visit '/static_pages_help'
+      visit '/static_pages/help'
       page.should have_selector('title', :text => "Ruby on Rails Tutorial Sample App | Help")
     end
   end
@@ -34,7 +34,7 @@ describe "Static pages" do
     
     it "should have the right title" do
       visit '/static_pages/about'
-      page.should have_selector(title, :text => "Ruby on Rails Tutorial Sample App | About")
+      page.should have_selector('title', :text => "Ruby on Rails Tutorial Sample App | About")
     end
   end
 

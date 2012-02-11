@@ -1,53 +1,58 @@
 require 'spec_helper'
 
 describe "Static pages" do
-
-  let(:base_title){"Ruby on Rails Tutorial Sample App"}
-
+  
+  subject{ page }
+  
   describe "Home page" do
-    it "should have the h1 'Sample App'" do
+    before(:each) do
       visit root_path
-      page.should have_selector('h1', text: 'Sample App')
+    end
+    it "should have the h1 'Sample App'" do
+      should have_selector('h1', text: 'Sample App')
     end
 
     it "should have the right title " do
-      visit root_path
-      page.should have_selector('title', text: "#{base_title} | Home")
+      should have_selector('title', text: full_title("Home"))
     end
   end
 
   describe "Help page" do
-    it "should have the h1 'Help'" do
+    before(:each) do
       visit help_path
-      page.should have_selector('h1', text: 'Help')
+    end
+    it "should have the h1 'Help'" do
+      should have_selector('h1', text: 'Help')
     end
 
     it "should have the right title" do
-      visit help_path
-      page.should have_selector('title', text: "#{base_title} | Help")
+      should have_selector('title', text: full_title("Help"))
     end
   end
 
   describe "About page" do
-    it "should have the h1 'About Us'" do
+    before(:each) do
       visit about_path
-      page.should have_selector('h1', text: 'About Us')
+    end
+    it "should have the h1 'About Us'" do
+      should have_selector('h1', text: 'About Us')
     end
 
     it "should have the right title" do
-      visit about_path
-      page.should have_selector('title', text: "#{base_title} | About")
+      should have_selector('title', text: full_title("About"))
     end
   end
 
   describe "Contact page" do
-    it "should have the h1 'Contact'" do
+    before(:each) do
       visit contact_path
-      page.should have_selector('h1',text: "Contact")
+    end
+    
+    it "should have the h1 'Contact'" do
+      should have_selector('h1',text: "Contact")
     end
     it "should have the right title" do
-      visit contact_path
-      page.should have_selector('title',text: "#{base_title} | Contact")
+      should have_selector('title',text: full_title("Contact"))
     end
   end
 

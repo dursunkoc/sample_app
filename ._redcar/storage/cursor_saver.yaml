@@ -1,9 +1,12 @@
 --- 
 cursor_positions: 
-  - :path: app/helpers/static_pages_helper.rb
-    :cursor_offset: 212
-    :timestamp: 2012-02-11 04:55:10.223000 +02:00
   - :path: script/rails
     :cursor_offset: 299
     :timestamp: 2012-02-11 02:19:53.129000 +02:00
+  - :path: app/helpers/static_pages_helper.rb
+    :cursor_offset: 0
+    :timestamp: 2012-02-11 20:34:51.376000 +02:00
+  - :path: Gemfile
+    :cursor_offset: 310
+    :timestamp: 2012-02-12 23:47:34.203000 +02:00
 files_to_retain: 0
